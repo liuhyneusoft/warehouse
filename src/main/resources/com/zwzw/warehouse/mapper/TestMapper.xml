@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zwzw.warehouse.mapper.TestMapper" >
+
+  <resultMap id="testmap" type="com.zwzw.warehouse.model.TestModel" >
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+  </resultMap>
+  
+ 
+  
+  <select id="test" parameterType="java.lang.String" resultMap="testmap" >
+	    select name from test order by id
+  </select>
+  
+   
+</mapper>

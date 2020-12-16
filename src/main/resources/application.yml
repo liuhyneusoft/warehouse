@@ -1,0 +1,26 @@
+spring:
+  thymeleaf:
+    #缓冲的配置
+    cache: false
+    check-template: true
+    check-template-location: true
+    #开启MVC thymeleaf 视图解析
+    enabled: true
+    encoding: utf-8
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+    
+    
+  #配置数据源
+  datasource:
+     url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=lhydev
+     username: testuser
+     password: 123456
+     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+mybatis:
+   config-location: classpath:config/mybatis-config.xml
+   mapper-lcations: classpath:com/**/*Mapper.xml
+   type-aliases-package: com.zwzw.warehouse.model
+ 
